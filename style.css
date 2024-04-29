@@ -29,6 +29,13 @@ body {
     width: 100%;
     background-color: #ffffff;
 }
+.content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
 .navigation {
     display: flex;
     background-color: #ffffff;
@@ -117,6 +124,7 @@ body {
 .homepage-header {
     position: relative;
     display: flex;
+    width: 100%;
     padding: 100px 0;
     background-color: var(--secondary-color-300);
 }
@@ -187,4 +195,17 @@ body {
 }
 .content__body--foreground {
     z-index: 10;
+}
+.content__main--full-width {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.featured-content {
+    display: flex;
+    width: 100%;
+    padding: 45px 50px;
+    margin: 50px 0;
+    border-radius: 0px 47px 0px 0px;
+    background-color: var(--secondary-color-500);
 }
