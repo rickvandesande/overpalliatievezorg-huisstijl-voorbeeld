@@ -11,16 +11,18 @@ ul, li {
 }
 h1 {
     margin: 0px;
+    font-size: 32px;
     font-weight: 600;
 }
 h2 {
     margin: 0px;
+    font-size: 26px;
     font-weight: 600;
 }
 body {
     color: var(--primary-color-800);
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 16px;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -155,15 +157,14 @@ body {
 .button {
     display: block;
     width: fit-content;
-    height: 40px;
     min-width: 200px;
     padding: 10px 30px;
     margin-top: 27px;
     overflow: hidden;
     font-weight: 400;
-    line-height: 40px;
     text-decoration: none;
     background-color: var(--primary-color-800);
+    border: 2px solid var(--primary-color-800);
     color: #ffffff;
     font-size: 16px;
     border-radius: 40px;
@@ -175,17 +176,15 @@ body {
 }
 .button::after {
     position: absolute;
-    top: 50%;
+    top: -15%;
     right: 15px;
     width: 9px;
     margin-top: 20px;
     content: url("https://overpalliatievezorg.nl/svg/chevron-right--white.svg?v=h_ZgKVpoq8y5pqjPhq53-iaU7RM");
-    transform: translate(0, -90%);
 }
 .button:hover {
-    background-color: #ffffff;
+    background-color: transparent;
     color: var(--primary-color-800);
-    border: 2px solid var(--primary-color-800);
 }
 .content__body {
     display: flex;
@@ -205,7 +204,91 @@ body {
     display: flex;
     width: 100%;
     padding: 45px 50px;
-    margin: 50px 0;
+    margin: 75px 0;
     border-radius: 0px 47px 0px 0px;
     background-color: var(--secondary-color-500);
+}
+.featured-content-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 29%;
+}
+.featured-content-item:nth-child(n+2) {
+    margin-left: calc((100% -(3*29%)) / 2);
+}
+.button--small {
+    width: fit-content;
+    min-width: 132px;
+}
+.button--white {
+    background-color: transparent;
+    color: var(--primary-color-800);
+}
+.button--white:hover {
+    background-color: var(--primary-color-800);
+    color: #ffffff;
+}
+.homepage-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+}
+.homepage-search__button {
+    flex: none;
+    width: 54px;
+    height: 54px;
+    margin-right: 40px;
+    background-color: transparent;
+    border: none;
+    fill: var(--primary-color-800);
+}
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search-bar--home {
+    width: 92%;
+}
+.search-bar__input {
+    padding: 0 0 5px;
+    margin-top: -10px;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-color-300);
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid var(--primary-color-800);
+}
+.featured-page {
+    display: flex;
+    width: 100%;
+    margin: 110px 0px;
+}
+.featured-page__media {
+    flex: none;
+    width: 528px;
+    height: 528px;
+    background-image: url(https://overpalliatievezorg.nl/getmedia/6b75c9ca-2a0c-4279-9775-73584102609e/praten-over-de-laatste-levensfase-home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 50% 50% 50%;
+}
+.breakout {
+    width: 100%;
+    margin-left: calc((1400px - 100vw) / 2);
+    margin-right: calc((100vw - 1400px) / 2);
+    padding: 110px calc((100vw - 1400px) / 2);
+}
+.blue {
+    background-color: var(--secondary-color-300);
+}
+.blue .featured-page__content {
+    position: relative;
+    margin: auto 0;
+    margin-left: 7.5%;
 }
