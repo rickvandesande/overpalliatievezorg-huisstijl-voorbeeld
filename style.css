@@ -131,7 +131,7 @@ body {
     background-color: var(--secondary-color-300);
 }
 .homepage-header__image {
-    background-image: url(https://overpalliatievezorg.nl/getmedia/f8f4df6c-c235-4bad-b933-4b07fb23ca13/Waheeda-home.jpg?width=622&height=800);
+    background-image: url(./assets/patricia.jpg);
     position: absolute;
     top: 0;
     width: 46.875%;
@@ -163,8 +163,8 @@ body {
     overflow: hidden;
     font-weight: 400;
     text-decoration: none;
-    background-color: var(--primary-color-800);
-    border: 2px solid var(--primary-color-800);
+    background-color: var(--touch-color-300);
+    border: 2px solid var(--touch-color-300);
     color: #ffffff;
     font-size: 16px;
     border-radius: 40px;
@@ -184,7 +184,7 @@ body {
 }
 .button:hover {
     background-color: transparent;
-    color: var(--primary-color-800);
+    color: var(--touch-color-300);
 }
 .content__body {
     display: flex;
@@ -224,9 +224,11 @@ body {
 .button--white {
     background-color: transparent;
     color: var(--primary-color-800);
+    border-color: var(--primary-color-800);
 }
 .button--white:hover {
     background-color: var(--primary-color-800);
+    border-color: var(--primary-color-800);
     color: #ffffff;
 }
 .homepage-search {
