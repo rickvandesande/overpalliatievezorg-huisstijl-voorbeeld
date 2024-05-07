@@ -215,7 +215,7 @@ body {
     width: 29%;
 }
 .featured-content-item:nth-child(n+2) {
-    margin-left: calc((100% -(3*29%)) / 2);
+    margin-left: calc((100% - (3*29%)) / 2);
 }
 .button--small {
     width: fit-content;
