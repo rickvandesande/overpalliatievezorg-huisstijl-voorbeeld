@@ -398,11 +398,10 @@ body {
     overflow: hidden;
 }
 .heading--tiny {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 14px !important;
 }
 .text--small {
-    font-size: 14px;
+    font-size: 14px !important;
 }
 .button--read-more {
     font-size: 14px;
