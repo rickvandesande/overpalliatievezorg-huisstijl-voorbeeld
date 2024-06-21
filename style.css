@@ -166,9 +166,9 @@ body {
     overflow: hidden;
     font-weight: 400;
     text-decoration: none;
-    background-color: var(--touch-color-300);
+    background-color: transparent;
     border: 2px solid var(--touch-color-300);
-    color: #ffffff;
+    color: var(--primary-color-800);
     font-size: 16px;
     border-radius: 40px;
     text-align: center !important;
@@ -177,17 +177,10 @@ body {
     position: relative;
     padding-right: 40px;
 }
-.button::after {
-    position: absolute;
-    top: -15%;
-    right: 15px;
-    width: 9px;
-    margin-top: 20px;
-    content: url("https://overpalliatievezorg.nl/svg/chevron-right--white.svg?v=h_ZgKVpoq8y5pqjPhq53-iaU7RM");
-}
 .button:hover {
-    background-color: transparent;
-    color: var(--touch-color-300);
+    background-color: var(--primary-color-800);
+    border-color: var(--primary-color-800);
+    color: #ffffff;
 }
 .content__body {
     display: flex;
@@ -218,19 +211,30 @@ body {
 }
 .featured-content-item:nth-child(n+2) {
     margin-left: calc((100% - (3*29%)) / 2);
+    position: relative;
+}
+.featured-content-item:nth-child(n+2)::before {
+    content: "";
+    height: 100%;
+    width: 4px;
+    background-color: var(--touch-color-300);
+    position: absolute;
+    top: 0;
+    left: -12.5%;
 }
 .button--small {
     width: fit-content;
     min-width: 132px;
 }
-.button--white {
-    background-color: var(--primary-color-800);;
+
+.button--blue {
+    background-color: var(--primary-color-800);
     color: #ffffff;
     border-color: var(--primary-color-800);
 }
-.button--white:hover {
-    background-color: #ffffff;
-    border-color: var(--primary-color-800);
+.button--blue:hover {
+    background-color: transparent;
+    border-color: var(--touch-color-300);
     color: var(--primary-color-800);
 }
 .homepage-search {
@@ -391,9 +395,13 @@ body {
     text-decoration: none;
     color: var(--primary-color-800);
 }
-.featured-subject__link:hover {
-    color: var(--touch-color-300);
+.featured-subject--link:hover ~ .featured-subject--link {
+    opacity: 40%;
 }
+.featured-subject--link:has(~ :hover) {
+    opacity: 40%;
+}
+
 .featured-subject__image {
     display: block;
     width: 100%;
@@ -421,7 +429,7 @@ body {
     padding-right: 40px;
     margin-top: 10px;
     text-align: left;
-    color: var(--touch-color-300);
+    color: var(--primary-color-800);
     position: relative;
 }
 .button--read-more::after {
@@ -430,9 +438,7 @@ body {
     right: 15px;
     margin-top: 4px;
 }
-.button--read-more:hover {
-    color: var(--primary-color-800);
-}
+
 .footer {
     display: flex;
     align-items: center;
@@ -557,7 +563,7 @@ body {
     color: var(--primary-color-800);
 }
 .overview-widget__item:hover {
-    color: var(--touch-color-300);
+    background-color: var(--secondary-color-500);
 }
 .overview-widget__item::before {
     position: absolute;
@@ -567,7 +573,7 @@ body {
     content: "";
     width: 4px;
     height: calc(100% - 4px);
-    background-color: var(--primary-color-800);
+    background-color: var(--touch-color-300);
     border-radius: 0 5px 0 0;
 }
 .overview-widget__details {
